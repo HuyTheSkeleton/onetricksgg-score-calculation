@@ -102,11 +102,11 @@
         parseFloat(b.dataset.score) - parseFloat(a.dataset.score)
     );
     
-    // header row at top -> sorted data -> remaining unscored data
+    // header row at top -> sorted data
     const others = dataRows.filter(r => !scored.includes(r));
     
     tbody.innerHTML = "";
-    tbody.appendChild(headerRow); // top header
+    tbody.appendChild(headerRow); // is top header
     sorted.forEach(r => tbody.appendChild(r));
     others.forEach(r => tbody.appendChild(r));
     
