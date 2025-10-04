@@ -110,5 +110,5 @@
     sorted.forEach(r => tbody.appendChild(r));
     others.forEach(r => tbody.appendChild(r));
     
-    console.log(`Sorted ${scored.length} players by score (80% WR, 15% PR, 5% LP + bonus).`);
+    console.log(`Sorted ${scored.length} players by score.`);
 })();
