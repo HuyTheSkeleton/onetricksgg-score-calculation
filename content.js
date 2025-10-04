@@ -1,7 +1,7 @@
 (() => {
     const tableSel = "#panel\\:Rv576\\:0 > div > table";
     const tbody = document.querySelector(`${tableSel} > tbody`);
-    if (!tbody) return console.error("Table tbody not found");
+    if (!tbody) return console.error("table tbody not found");
     
     const allRows = Array.from(tbody.querySelectorAll("tr"));
     
@@ -93,7 +93,7 @@
     });
     
     if (scored.length === 0) {
-        console.log("No scored rows found among the top 30 (nothing changed).");
+        console.log("no data found");
         return;
     }
     
@@ -110,5 +110,5 @@
     sorted.forEach(r => tbody.appendChild(r));
     others.forEach(r => tbody.appendChild(r));
     
-    console.log(`Sorted ${scored.length} players by score.`);
+    console.log(`sorted ${scored.length} players by score`);
 })();
