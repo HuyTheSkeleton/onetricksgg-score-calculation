@@ -70,13 +70,14 @@
         const playrateScore = Math.min(playRate, 15);
         
         // lp score (minimal - 0-5 points)
-        const lpScore = Math.min(lp, 2000) / 2000 * 5;
+        // 100 LP = 1.2 points (0.012 scaling factor) capped at 30 points
+        const lpScore = Math.min(lp * 0.012, 30);
         
         // otp bonus
         const commitmentBonus = playRate >= 50 ? 25 : 0;
         
-        // final score: winrate 80% playrate 15% lp 5%
-        const score = (winrateScore * reliability * 0.80) + (playrateScore * 0.15) + (lpScore * 0.05) + commitmentBonus;
+        // final score: winrate 80% playrate 15% lp 30%
+        const score = (winrateScore * reliability * 0.80) + (playrateScore * 0.15) + (lpScore * 0.30) + commitmentBonus;
         
         let scoreCell = row.querySelector(".score-cell");
         if (!scoreCell) {
