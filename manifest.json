@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Onetricks.gg Score Calculation",
+  "version": "1.0",
+  "description": "Calculates and sorts player scores",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Score Calculation"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://www.onetricks.gg/*"]
+}
