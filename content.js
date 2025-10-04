@@ -63,8 +63,8 @@
         
         const reliability = reliabilityFor(games);
         
-        // aggresive winrate scaling 40% = 0pts 50% = 50pts 55% = 75pts 60% = 100pts 65% = 125pts 70% = 150pts
-        const winrateScore = Math.max(0, (winRate - 40) * 5);
+        // winrate scaling
+        const winrateScore = Math.max(0, (winRate - 40) * 2);
         
         // playrate (0-15 points max)
         const playrateScore = Math.min(playRate, 15);
@@ -74,7 +74,7 @@
         const lpScore = Math.min(lp * 0.012, 30);
         
         // otp bonus
-        const commitmentBonus = playRate >= 50 ? 25 : 0;
+        const commitmentBonus = playRate >= 50 ? 5 : 0;
         
         // final score: winrate 80% playrate 15% lp 30%
         const score = (winrateScore * reliability * 0.80) + (playrateScore * 0.15) + (lpScore * 0.30) + commitmentBonus;
