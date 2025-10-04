@@ -18,7 +18,7 @@
         headerRow.appendChild(headerCell);
     }
     
-    const candidates = dataRows.slice(0, 30);
+ //  const candidates = dataRows.slice(0, 30);
     const scored = [];
     
     // reliability (200 games = ~63%, 400 games = ~86%)
@@ -28,7 +28,7 @@
     dataRows.forEach((row, idx) => {
         const cells = row.querySelectorAll("td");
         
-        if (idx >= 30 || cells.length < 12) {
+        if (cells.length < 12) {
             if (!row.querySelector(".score-cell")) {
                 const emptyCell = document.createElement("td");
                 emptyCell.className = "score-cell";
