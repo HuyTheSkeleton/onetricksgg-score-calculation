@@ -1,2 +1,2 @@
 # onetricksgg-score-calculation
-For the time being, copy content.js --> F12 --> paste all of it to console
+Now fully functional as a tampermonkey extension: https://greasyfork.org/en/scripts/551615-onetricks-gg-score-calculation
